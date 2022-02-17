@@ -19,6 +19,9 @@ Resources:
         Ec2SshKey: SshKeyString
         SourceSecurityGroups: 
           - sg-0
+      Tags:
+        - Key: yor_trace
+          Value: ad5b2f31-4db2-4690-8a98-3662513f82e2
   Resource1:
     Type: 'AWS::EKS::Nodegroup'
     Properties:
@@ -34,3 +37,6 @@ Resources:
       Subnets:
         - subnet-6782e71e
         - subnet-e7e761ac
+      Tags:
+        - Key: yor_trace
+          Value: 2b1b6e83-1485-4d29-903c-704026547879

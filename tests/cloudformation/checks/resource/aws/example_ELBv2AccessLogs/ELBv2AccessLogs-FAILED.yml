@@ -12,6 +12,9 @@ Resources:
       Subnets:
       - SubnetID0
       - SubnetID1
+      Tags:
+        - Key: yor_trace
+          Value: 3321d8fc-3674-4d81-862f-e76cc33aa22f
   Resource1:
     Type: 'AWS::ElasticLoadBalancingV2::LoadBalancer'
     Properties:
@@ -22,6 +25,9 @@ Resources:
       Subnets:
       - SubnetID0
       - SubnetID1
+      Tags:
+        - Key: yor_trace
+          Value: e303076b-2054-4418-9ade-bc82d21173d5
   Resource2:
     Type: 'AWS::ElasticLoadBalancingV2::LoadBalancer'
     Properties:
@@ -29,3 +35,6 @@ Resources:
       Subnets:
       - SubnetID0
       - SubnetID1
+      Tags:
+        - Key: yor_trace
+          Value: 456a085f-7a10-4bda-9308-90495e2b68bc

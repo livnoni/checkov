@@ -8,6 +8,9 @@ Resources:
         - test-0
         - test-1
       Type: network
+      Tags:
+        - Key: yor_trace
+          Value: a1557c14-550b-49c0-92cd-d7837cb0cf1d
   UnknownGatewayLB:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
     Properties:
@@ -16,3 +19,6 @@ Resources:
         - test-0
         - test-1
       Type: gateway
+      Tags:
+        - Key: yor_trace
+          Value: 5d7d9cbe-59f1-4bf2-b56d-e09853839b4b

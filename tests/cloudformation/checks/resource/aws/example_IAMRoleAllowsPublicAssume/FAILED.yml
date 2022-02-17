@@ -13,6 +13,9 @@ Resources:
                   - "*"
             Action:
             - "sts:AssumeRole"
+        Tags:
+          - Key: yor_trace
+            Value: 3cea4f2a-ffd2-4658-8780-cbc83f6587d8
   AWSStarPrincipalInList:
       Type: AWS::IAM::Role
       Properties:
@@ -26,3 +29,6 @@ Resources:
                   - "*"
             Action:
             - "sts:AssumeRole"
+        Tags:
+          - Key: yor_trace
+            Value: c73dcc79-e316-4b1f-a652-905a0839f344

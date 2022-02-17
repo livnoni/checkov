@@ -17,6 +17,9 @@ resource "azurerm_postgresql_flexible_server" "pass" {
   sku_name   = "GP_Standard_D4s_v3"
   depends_on = ["azurerm_private_dns_zone_virtual_network_link.example"]
 
+  tags = {
+    yor_trace = "4a74ff6a-fcd1-4b83-b685-eb91e30a8638"
+  }
 }
 
 # fail
@@ -38,6 +41,9 @@ resource "azurerm_postgresql_flexible_server" "fail1" {
   sku_name   = "GP_Standard_D4s_v3"
   depends_on = ["azurerm_private_dns_zone_virtual_network_link.example"]
 
+  tags = {
+    yor_trace = "def59ae3-aebb-4395-9970-8647657aeaf5"
+  }
 }
 
 resource "azurerm_postgresql_flexible_server" "fail2" {
@@ -56,6 +62,9 @@ resource "azurerm_postgresql_flexible_server" "fail2" {
   sku_name   = "GP_Standard_D4s_v3"
   depends_on = ["azurerm_private_dns_zone_virtual_network_link.example"]
 
+  tags = {
+    yor_trace = "e573750f-da6f-4171-a3d6-73ea62613421"
+  }
 }
 
 

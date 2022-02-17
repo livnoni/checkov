@@ -44,6 +44,9 @@ resource "azurerm_network_security_group" "ssh_restricted" {
     destination_port_range = 22
     source_address_prefix  = "10.0.0.0/16"
   }
+  tags = {
+    yor_trace = "2e044421-c806-43d8-86cb-e8d4d78acb6a"
+  }
 }
 
 # fail
@@ -127,5 +130,8 @@ resource "azurerm_network_security_group" "ranges" {
       "8000-9000"
     ]
     source_address_prefix = "*"
+  }
+  tags = {
+    yor_trace = "14b007e5-c263-4e6f-b421-9521690cbb8d"
   }
 }

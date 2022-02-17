@@ -10,5 +10,8 @@ module "web_server_sg" {
 
 resource "aws_flow_log" "related_flow_log" {
   traffic_type = ""
-  vpc_id = module.web_server_sg.security_group_vpc_id
+  vpc_id       = module.web_server_sg.security_group_vpc_id
+  tags = {
+    yor_trace = "08912645-7c5b-4c58-b009-2b93393e05b4"
+  }
 }

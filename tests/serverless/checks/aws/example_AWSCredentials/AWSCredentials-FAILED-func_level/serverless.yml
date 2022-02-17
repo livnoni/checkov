@@ -26,6 +26,7 @@ functions:
     tags:
       RESOURCE: lambda
       PUBLIC: false
+      yor_trace: 1a6c3361-36c4-4a8d-9d04-e51f1317540b
     iamRoleStatements:
       - Effect: Allow
         Action:

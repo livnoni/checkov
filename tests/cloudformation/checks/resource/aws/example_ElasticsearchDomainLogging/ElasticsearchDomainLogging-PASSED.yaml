@@ -9,3 +9,6 @@ Resources:
         AUDIT_LOGS:
           Enabled: True
           CloudWatchLogsLogGroupArn: CloudWatchLogsLogGroupArn
+      Tags:
+        - Key: yor_trace
+          Value: dc51655b-358d-4d0a-86b3-f925ab4f3a36

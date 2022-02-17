@@ -44,6 +44,9 @@ resource "azurerm_network_security_group" "rdp_restricted" {
     destination_port_range = 3389
     source_address_prefix  = "10.0.0.0/16"
   }
+  tags = {
+    yor_trace = "1b56118f-012a-4f99-8062-7b163782b6a1"
+  }
 }
 
 # fail
@@ -127,5 +130,8 @@ resource "azurerm_network_security_group" "ranges" {
       "8000-9000"
     ]
     source_address_prefix = "*"
+  }
+  tags = {
+    yor_trace = "3a4fac43-9c41-4fa7-9942-e89013f9170f"
   }
 }

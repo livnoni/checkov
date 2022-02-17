@@ -14,6 +14,9 @@ resource "google_bigquery_table" "fail" {
       "https://docs.google.com/spreadsheets/d/123456789012345",
     ]
   }
+  labels = {
+    yor_trace = "f59bdcb4-98ba-4544-bfd9-cc277ffe84ce"
+  }
 }
 
 
@@ -36,5 +39,8 @@ resource "google_bigquery_table" "pass" {
 
   encryption_configuration {
     kms_key_name = var.kms_key_name
+  }
+  labels = {
+    yor_trace = "a3fad1fa-9709-47fc-ae79-e988cc2624a7"
   }
 }

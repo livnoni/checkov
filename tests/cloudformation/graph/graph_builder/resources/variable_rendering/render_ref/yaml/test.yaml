@@ -13,6 +13,9 @@ Resources:
     Type: AWS::SQS::Queue
     Properties:
       KmsMasterKeyId: !Ref KmsMasterKeyId
+      Tags:
+        - Key: yor_trace
+          Value: 4d406e6d-6c45-4fe4-8c20-f48ad2263f52
   MyDB:
     Type: 'AWS::RDS::DBInstance'
     # Test case for check skip via comment
@@ -23,6 +26,9 @@ Resources:
       Engine: 'mysql'
       MasterUsername: 'master'
       MasterUserPassword: 'password'
+      Tags:
+        - Key: yor_trace
+          Value: 503ed0e4-14c8-4874-999a-fa1c0b5b1e26
 Outputs:
   MyDBInstanceName:
     Description: My DB Instance Name

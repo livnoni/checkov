@@ -6,3 +6,6 @@ Resources:
       RepositoryName: "test"
       ImageScanningConfiguration:
         ScanOnPush: true
+      Tags:
+        - Key: yor_trace
+          Value: 4dc8caa7-cb5c-4784-a263-7372b7e7eaa0

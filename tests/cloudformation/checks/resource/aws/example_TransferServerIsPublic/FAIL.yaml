@@ -4,5 +4,11 @@ Resources:
     Type: AWS::Transfer::Server
     Properties: 
       EndpointType: "PUBLIC"
+      Tags:
+        - Key: yor_trace
+          Value: a4851c42-ed9d-41c7-a544-ece06aa25226
+      Tags:
+        - Key: yor_trace
+          Value: ae5c252c-ecc9-46a8-a2d0-88f462ee2443
   NONE:
     Type: AWS::Transfer::Server

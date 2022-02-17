@@ -8,3 +8,6 @@ Resources:
         - Endpoint: "SNSEndpoint"
           Protocol: "sqs"
       TopicName: "SampleTopic"
+      Tags:
+        - Key: yor_trace
+          Value: 188d7944-e031-4c5b-884e-69a272d7017a

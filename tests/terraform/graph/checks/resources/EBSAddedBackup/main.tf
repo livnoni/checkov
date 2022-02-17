@@ -3,7 +3,8 @@ resource "aws_ebs_volume" "ebs_good" {
   size              = 40
 
   tags = {
-    Name = "HelloWorld"
+    Name      = "HelloWorld"
+    yor_trace = "de3ffc5c-6380-4393-a3d4-a0c6875c67b2"
   }
 }
 
@@ -12,7 +13,8 @@ resource "aws_ebs_volume" "ebs_bad" {
   size              = 40
 
   tags = {
-    Name = "HelloWorld"
+    Name      = "HelloWorld"
+    yor_trace = "4f21b3ba-6bc9-4029-ad77-2bf6d4f56582"
   }
 }
 

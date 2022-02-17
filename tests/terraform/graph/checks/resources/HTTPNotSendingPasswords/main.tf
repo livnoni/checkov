@@ -1,19 +1,25 @@
 resource "aws_ssm_parameter" "param" {
-  name = var.parameter_name
-  type = "SecureString"
+  name  = var.parameter_name
+  type  = "SecureString"
   value = random_password.password.result
+  tags = {
+    yor_trace = "efbf6cb7-2ae3-4c63-a141-d584c0d0cb9c"
+  }
 }
 
 
 resource "aws_ssm_parameter" "param2" {
-  name = var.parameter_name
-  type = "String"
+  name  = var.parameter_name
+  type  = "String"
   value = "foo"
+  tags = {
+    yor_trace = "19e1f478-b8ab-4925-9cb4-3e6af2b1b91b"
+  }
 }
 
 resource "random_password" "password" {
-  length = 16
-  special = true
+  length           = 16
+  special          = true
   override_special = "_%@"
 }
 

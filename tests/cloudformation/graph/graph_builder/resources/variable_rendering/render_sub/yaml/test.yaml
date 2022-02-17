@@ -14,11 +14,17 @@ Resources:
       CidrBlock: 172.16.0.0/16
       EnableDnsSupport: true
       EnableDnsHostnames: true
+      Tags:
+        - Key: yor_trace
+          Value: 81cf89a7-7ad5-4ac4-8463-a1642637ebd8
   DefaultDB:
     Type: AWS::RDS::DBInstance
     Properties:
       DBName: !Sub "rds-${AWS::AccountId}-${CompanyName}-${Environment}"
       DBInstanceClass: "db.m4.large"
+      Tags:
+        - Key: yor_trace
+          Value: dc12249a-28b9-4919-9b37-fd6b941ed8c0
 Outputs:
   DBEndpoint:
     Description: DB Endpoint

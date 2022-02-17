@@ -22,6 +22,9 @@ resource "aws_security_group" "pass" {
     to_port     = 0
     protocol    = "-1"
   }
+  tags = {
+    yor_trace = "a5ef250b-9b2d-489e-bcc1-c39940d90b87"
+  }
 }
 
 resource "aws_security_group_rule" "pass" {
@@ -56,6 +59,9 @@ resource "aws_security_group" "fail" {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
+  }
+  tags = {
+    yor_trace = "429ccf01-bd24-465a-8a57-9652041f1b7a"
   }
 }
 

@@ -24,8 +24,10 @@ resource "oci_core_instance" "fail" {
     some_string   = "stringA"
     nested_object = "{\"some_string\": \"stringB\", \"object\": {\"some_string\": \"stringC\"}}"
   }
-  fault_domain  = var.instance_fault_domain
-  freeform_tags = { "Department" = "Finance" }
+  fault_domain = var.instance_fault_domain
+  freeform_tags = { "Department" = "Finance"
+    yor_trace = "2efc1f17-a549-4977-9af8-ae18a2b9066e"
+  }
 
   instance_options {
     are_legacy_imds_endpoints_disabled = var.instance_instance_options_are_legacy_imds_endpoints_disabled
@@ -116,8 +118,10 @@ resource "oci_core_instance" "pass" {
     some_string   = "stringA"
     nested_object = "{\"some_string\": \"stringB\", \"object\": {\"some_string\": \"stringC\"}}"
   }
-  fault_domain  = var.instance_fault_domain
-  freeform_tags = { "Department" = "Finance" }
+  fault_domain = var.instance_fault_domain
+  freeform_tags = { "Department" = "Finance"
+    yor_trace = "756a4207-2c69-4fcc-8269-853c0e76786a"
+  }
   instance_options {
     are_legacy_imds_endpoints_disabled = var.instance_instance_options_are_legacy_imds_endpoints_disabled
   }

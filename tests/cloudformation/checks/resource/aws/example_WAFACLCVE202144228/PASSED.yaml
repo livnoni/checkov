@@ -28,3 +28,6 @@ Resources:
             CloudWatchMetricsEnabled: false
             MetricName: AWSManagedRulesKnownBadInputsRuleSet
             SampledRequestsEnabled: false
+      Tags:
+        - Key: yor_trace
+          Value: 6718787f-7f78-4d88-a7b9-54ce5f0125c3

@@ -9,7 +9,8 @@ resource "aws_eks_cluster" "tf_eks" {
   }
 
   tags = {
-    project = var.project
+    project   = var.project
+    yor_trace = "5496a817-7e44-458e-aedd-a19a6f4103b9"
   }
 
   depends_on = [

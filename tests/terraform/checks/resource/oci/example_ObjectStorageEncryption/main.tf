@@ -3,9 +3,11 @@ resource "oci_objectstorage_bucket" "pass" {
   name           = var.bucket_name
   namespace      = var.namespace
 
-  access_type           = var.bucket_access_type
-  defined_tags          = var.defined_tags
-  freeform_tags         = var.freeform_tags
+  access_type  = var.bucket_access_type
+  defined_tags = var.defined_tags
+  freeform_tags = merge(var.freeform_tags, {
+    yor_trace = "c2122864-7e85-4069-95a5-bc49ab61025e"
+  })
   kms_key_id            = var.oci_kms_key.id
   metadata              = var.metadata
   storage_tier          = var.bucket_storage_tier
@@ -30,9 +32,11 @@ resource "oci_objectstorage_bucket" "fail" {
   name           = var.bucket_name
   namespace      = var.namespace
 
-  access_type           = var.bucket_access_type
-  defined_tags          = var.defined_tags
-  freeform_tags         = var.freeform_tags
+  access_type  = var.bucket_access_type
+  defined_tags = var.defined_tags
+  freeform_tags = merge(var.freeform_tags, {
+    yor_trace = "9a560640-c670-420e-82b7-b16f05e5bdd3"
+  })
   metadata              = var.metadata
   storage_tier          = var.bucket_storage_tier
   object_events_enabled = false

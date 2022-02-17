@@ -5,7 +5,8 @@ resource "aws_s3_bucket" "foo-bucket" {
   #checkov:skip=CKV_AWS_20:The bucket is a public static content host
 
   tags = {
-    Name = "foo-${data.aws_caller_identity.current.account_id}"
+    Name      = "foo-${data.aws_caller_identity.current.account_id}"
+    yor_trace = "a8a38dbe-ed73-40a7-bafa-e554e36fd6d7"
   }
   versioning {
     enabled = true
@@ -22,6 +23,6 @@ resource "aws_s3_bucket" "foo-bucket" {
       }
     }
   }
-  acl           = "public-read"
+  acl = "public-read"
 }
 data "aws_caller_identity" "current" {}

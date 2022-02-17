@@ -4,3 +4,6 @@ Resources:
     Type: AWS::SQS::Queue
     Properties:
       KmsMasterKeyId: "kms_id"
+      Tags:
+        - Key: yor_trace
+          Value: 12cdd9a0-ce65-4435-8aa0-6fd8c3f2ef39

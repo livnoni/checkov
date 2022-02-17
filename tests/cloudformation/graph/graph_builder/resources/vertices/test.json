@@ -17,12 +17,24 @@
     "MySourceQueue": {
       "Type": "AWS::SQS::Queue",
       "Properties": {
+        "Tags": [
+          {
+            "Key": "yor_trace",
+            "Value": "cb7b1623-65ce-410e-878d-8a9bde5ce345"
+          }
+        ],
         "KmsMasterKeyId": { "Ref": "KmsMasterKeyId" }
       }
     },
     "MyDB": {
       "Type": "AWS::RDS::DBInstance",
       "Properties": {
+        "Tags": [
+          {
+            "Key": "yor_trace",
+            "Value": "9b83b5e4-476d-446e-9d2a-e9dbe29cd6b7"
+          }
+        ],
         "DBName": { "Ref": "DBName" },
         "DBInstanceClass": "db.t3.micro",
         "Engine": "mysql",

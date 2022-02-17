@@ -3,6 +3,9 @@ data "azurerm_client_config" "current" {}
 resource "azurerm_resource_group" "example" {
   name     = "example-resources"
   location = "West Europe"
+  tags = {
+    yor_trace = "d3f86598-7ea9-4a07-baff-849a89c4796e"
+  }
 }
 
 resource "azurerm_key_vault" "example" {
@@ -13,6 +16,9 @@ resource "azurerm_key_vault" "example" {
   sku_name            = "standard"
 
   purge_protection_enabled = true
+  tags = {
+    yor_trace = "8f874159-eea6-4d07-9fda-13e4173cf5b7"
+  }
 }
 
 resource "azurerm_key_vault_access_policy" "client" {
@@ -34,6 +40,9 @@ resource "azurerm_key_vault_key" "example" {
   depends_on = [
     azurerm_key_vault_access_policy.client
   ]
+  tags = {
+    yor_trace = "a5893740-aa87-4528-898a-e83a73dbe1e7"
+  }
 }
 
 
@@ -47,6 +56,9 @@ resource "azurerm_storage_account" "ok_storage_account" {
   identity {
     type = "SystemAssigned"
   }
+  tags = {
+    yor_trace = "a9bcddad-922a-4882-9e0f-0669dadbdeb5"
+  }
 }
 
 resource "azurerm_storage_account" "not_ok_storage_account" {
@@ -58,6 +70,9 @@ resource "azurerm_storage_account" "not_ok_storage_account" {
 
   identity {
     type = "SystemAssigned"
+  }
+  tags = {
+    yor_trace = "5b18766b-2a34-4310-9d96-b03297f24fe5"
   }
 }
 

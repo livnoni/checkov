@@ -29,6 +29,9 @@ resource "aws_iam_policy" "pass1" {
   "Version": "2012-10-17"
 }
 POLICY
+  tags = {
+    yor_trace = "47e64a69-c0ec-41f3-b5a5-707335bf5e24"
+  }
 }
 
 resource "aws_iam_policy" "fail1" {
@@ -55,6 +58,9 @@ resource "aws_iam_policy" "fail1" {
   "Version": "2012-10-17"
 }
 POLICY
+  tags = {
+    yor_trace = "4dd7802a-5c41-47c6-9618-423b11085d9b"
+  }
 }
 
 resource "aws_iam_policy" "fail2" {
@@ -77,6 +83,9 @@ resource "aws_iam_policy" "fail2" {
   "Version": "2012-10-17"
 }
 POLICY
+  tags = {
+    yor_trace = "2f31da95-69f4-4d09-8514-7ef433336d2d"
+  }
 }
 
 resource "aws_iam_policy" "fail3" {
@@ -95,6 +104,9 @@ resource "aws_iam_policy" "fail3" {
   "Version": "2012-10-17"
 }
 POLICY
+  tags = {
+    yor_trace = "d6323b83-32b8-44de-933d-5e144a6e4aa2"
+  }
 }
 
 resource "aws_iam_policy" "fail4" {
@@ -113,6 +125,9 @@ resource "aws_iam_policy" "fail4" {
   "Version": "2012-10-17"
 }
 POLICY
+  tags = {
+    yor_trace = "925b95f2-5421-4ce3-8cbc-78d53073cdc2"
+  }
 }
 
 resource "aws_iam_policy" "pass2" {
@@ -132,6 +147,9 @@ resource "aws_iam_policy" "pass2" {
   "Version": "2012-10-17"
 }
 POLICY
+  tags = {
+    yor_trace = "432fdb37-9250-459a-828f-1e43462dfc03"
+  }
 }
 
 

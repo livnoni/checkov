@@ -46,6 +46,9 @@ resource "aws_wafv2_web_acl" "pass" {
     metric_name                = "friendly-metric-name"
     sampled_requests_enabled   = false
   }
+  tags = {
+    yor_trace = "d96bf85a-d215-4c9b-b067-cc0110d7d46d"
+  }
 }
 
 resource "aws_wafv2_web_acl" "multi_rules" {
@@ -128,6 +131,9 @@ resource "aws_wafv2_web_acl" "multi_rules" {
     metric_name                = "friendly-metric-name"
     sampled_requests_enabled   = false
   }
+  tags = {
+    yor_trace = "844c5963-88b6-4af5-ac40-602fc5ba18f2"
+  }
 }
 
 # fail
@@ -145,6 +151,9 @@ resource "aws_wafv2_web_acl" "no_rule" {
     cloudwatch_metrics_enabled = false
     metric_name                = "friendly-metric-name"
     sampled_requests_enabled   = false
+  }
+  tags = {
+    yor_trace = "8bd89f1c-55b5-4ca6-aa05-1ba37eeac507"
   }
 }
 
@@ -183,6 +192,9 @@ resource "aws_wafv2_web_acl" "wrong_rule" {
     cloudwatch_metrics_enabled = false
     metric_name                = "friendly-metric-name"
     sampled_requests_enabled   = false
+  }
+  tags = {
+    yor_trace = "d251845e-6d24-4f14-a62d-8e6cbf613d25"
   }
 }
 
@@ -226,6 +238,9 @@ resource "aws_wafv2_web_acl" "rule_count" {
     metric_name                = "friendly-metric-name"
     sampled_requests_enabled   = false
   }
+  tags = {
+    yor_trace = "2f4478fe-f6b6-4a3b-b79e-559f0887b296"
+  }
 }
 
 resource "aws_wafv2_web_acl" "rule_group_count" {
@@ -263,5 +278,8 @@ resource "aws_wafv2_web_acl" "rule_group_count" {
     cloudwatch_metrics_enabled = false
     metric_name                = "friendly-metric-name"
     sampled_requests_enabled   = false
+  }
+  tags = {
+    yor_trace = "9ed51589-7c19-445a-911f-d258e6e29f12"
   }
 }

@@ -96,6 +96,7 @@ resource "aws_cloudfront_distribution" "fail" {
 
   tags = {
     Environment = "production"
+    yor_trace   = "93f73ca0-f4e2-457a-81d0-6d0473cd3505"
   }
 
   viewer_certificate {
@@ -201,6 +202,7 @@ resource "aws_cloudfront_distribution" "fail2" {
 
   tags = {
     Environment = "production"
+    yor_trace   = "ff4b2b61-099a-44a2-9e4f-81e247a194ff"
   }
 
   viewer_certificate {
@@ -307,6 +309,7 @@ resource "aws_cloudfront_distribution" "fail3" {
 
   tags = {
     Environment = "production"
+    yor_trace   = "d5c0c997-3886-46a4-b39f-c550abb8d213"
   }
 
   viewer_certificate {
@@ -414,6 +417,7 @@ resource "aws_cloudfront_distribution" "pass" {
 
   tags = {
     Environment = "production"
+    yor_trace   = "9f97a1d0-79a2-43c2-be4c-06fbaacd9b86"
   }
 
   viewer_certificate {
@@ -520,6 +524,7 @@ resource "aws_cloudfront_distribution" "pass1" {
 
   tags = {
     Environment = "production"
+    yor_trace   = "14f19f4f-77f4-4edd-a01e-19429099dd75"
   }
 
   viewer_certificate {

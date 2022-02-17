@@ -19,6 +19,7 @@ resource "google_redis_instance" "pass" {
   labels = {
     my_key    = "my_val"
     other_key = "other_val"
+    yor_trace = "ac160105-d103-4a3e-8a9d-f5d1b5b27b67"
   }
   transit_encryption_mode = "SERVER_AUTHENTICATION"
 }
@@ -43,6 +44,7 @@ resource "google_redis_instance" "fail" {
   labels = {
     my_key    = "my_val"
     other_key = "other_val"
+    yor_trace = "33ad1477-a846-4b17-9593-85e57b517997"
   }
   #   transit_encryption_mode = ""
 }
@@ -68,6 +70,7 @@ resource "google_redis_instance" "fail2" {
   labels = {
     my_key    = "my_val"
     other_key = "other_val"
+    yor_trace = "7d7b2a9e-f877-4ec4-a244-c8ff854b5373"
   }
-     transit_encryption_mode = "DISABLED"
+  transit_encryption_mode = "DISABLED"
 }

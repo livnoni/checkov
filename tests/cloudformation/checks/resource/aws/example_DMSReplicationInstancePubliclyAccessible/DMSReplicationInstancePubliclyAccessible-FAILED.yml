@@ -4,8 +4,14 @@ Resources:
     Type: AWS::DMS::ReplicationInstance
     Properties: 
       ReplicationInstanceClass: dms.c4.large
+      Tags:
+        - Key: yor_trace
+          Value: f1e83ccd-0a0a-4e7a-8b7a-eda2f3c0efb2
   Resource1:
     Type: AWS::DMS::ReplicationInstance
     Properties: 
       PubliclyAccessible: True
       ReplicationInstanceClass: dms.c4.large
+      Tags:
+        - Key: yor_trace
+          Value: e87efe4c-fefc-4367-91d0-029cba8397cc

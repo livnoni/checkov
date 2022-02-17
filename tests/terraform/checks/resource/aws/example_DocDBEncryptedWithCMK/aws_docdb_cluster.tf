@@ -5,6 +5,9 @@ resource "aws_docdb_cluster" "fail" {
   master_password     = "mustbeeightcharaters"
   storage_encrypted   = true
   skip_final_snapshot = true
+  tags = {
+    yor_trace = "aa25467c-4b83-4275-8189-149a52a17221"
+  }
 }
 
 resource "aws_docdb_cluster" "pass" {
@@ -15,4 +18,7 @@ resource "aws_docdb_cluster" "pass" {
   storage_encrypted   = true
   kms_key_id          = aws_kms_key.foo.arn
   skip_final_snapshot = true
+  tags = {
+    yor_trace = "c5ba22d8-40f9-420e-9071-f6bead8b21f7"
+  }
 }

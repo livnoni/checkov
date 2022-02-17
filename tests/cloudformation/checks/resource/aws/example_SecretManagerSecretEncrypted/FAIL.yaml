@@ -4,13 +4,22 @@ Resources:
     Type: AWS::SecretsManager::Secret
     Properties: 
       Name: test
+      Tags:
+        - Key: yor_trace
+          Value: c1ee0ef1-ad3e-4301-a78e-76cfef7722bf
   AWSKMS0:
     Type: AWS::SecretsManager::Secret
     Properties: 
       Name: test
       KmsKeyId: aws/secretsmanager
+      Tags:
+        - Key: yor_trace
+          Value: b34f8583-74f9-4eeb-98df-7f3e79112c51
   AWSKMS1:
     Type: AWS::SecretsManager::Secret
     Properties: 
       Name: test
       KmsKeyId: alias/aws/secretsmanager
+      Tags:
+        - Key: yor_trace
+          Value: c9add130-fe02-4b80-ada6-6a8cecdde747

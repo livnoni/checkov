@@ -1,21 +1,27 @@
 resource "aws_rds_cluster" "rds_cluster_good" {
-  cluster_identifier      = "aurora-cluster-demo"
-  engine                  = "aurora-mysql"
-  engine_version          = "5.7.mysql_aurora.2.03.2"
-  availability_zones      = ["us-west-2a", "us-west-2b", "us-west-2c"]
-  database_name           = "mydb"
-  master_username         = "foo"
-  master_password         = "bar"
+  cluster_identifier = "aurora-cluster-demo"
+  engine             = "aurora-mysql"
+  engine_version     = "5.7.mysql_aurora.2.03.2"
+  availability_zones = ["us-west-2a", "us-west-2b", "us-west-2c"]
+  database_name      = "mydb"
+  master_username    = "foo"
+  master_password    = "bar"
+  tags = {
+    yor_trace = "edd7ed3d-80b0-4a01-bc85-38c241714030"
+  }
 }
 
 resource "aws_rds_cluster" "rds_cluster_bad" {
-  cluster_identifier      = "aurora-cluster-demo"
-  engine                  = "aurora-mysql"
-  engine_version          = "5.7.mysql_aurora.2.03.2"
-  availability_zones      = ["us-west-2a", "us-west-2b", "us-west-2c"]
-  database_name           = "mydb"
-  master_username         = "foo"
-  master_password         = "bar"
+  cluster_identifier = "aurora-cluster-demo"
+  engine             = "aurora-mysql"
+  engine_version     = "5.7.mysql_aurora.2.03.2"
+  availability_zones = ["us-west-2a", "us-west-2b", "us-west-2c"]
+  database_name      = "mydb"
+  master_username    = "foo"
+  master_password    = "bar"
+  tags = {
+    yor_trace = "fa2c732e-75ef-4952-ad4d-d5fc7efe3f0f"
+  }
 }
 
 resource "aws_backup_plan" "example" {
@@ -25,6 +31,9 @@ resource "aws_backup_plan" "example" {
     rule_name         = "tf_example_backup_rule"
     target_vault_name = "vault-name"
     schedule          = "cron(0 12 * * ? *)"
+  }
+  tags = {
+    yor_trace = "16d01ba9-3581-4110-967a-6e8ca9369f13"
   }
 }
 

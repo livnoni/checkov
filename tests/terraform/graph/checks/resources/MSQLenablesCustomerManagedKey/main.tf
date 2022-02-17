@@ -1,6 +1,9 @@
 resource "azurerm_resource_group" "ok" {
   name     = "ok-resources"
   location = "West Europe"
+  tags = {
+    yor_trace = "4d1273e7-3221-460c-a52e-1b6082734afd"
+  }
 }
 
 resource "azurerm_key_vault" "ok" {
@@ -10,6 +13,9 @@ resource "azurerm_key_vault" "ok" {
   tenant_id                = data.azurerm_client_config.current.tenant_id
   sku_name                 = "premium"
   purge_protection_enabled = true
+  tags = {
+    yor_trace = "2cd13586-61d3-43fb-83b9-0bf53178ca4e"
+  }
 }
 
 resource "azurerm_key_vault_access_policy" "server" {
@@ -38,6 +44,9 @@ resource "azurerm_key_vault_key" "ok" {
     azurerm_key_vault_access_policy.client,
     azurerm_key_vault_access_policy.server,
   ]
+  tags = {
+    yor_trace = "b1317953-fe2e-48dc-934f-51dfa589f50e"
+  }
 }
 
 resource "azurerm_mysql_server" "ok" {
@@ -54,6 +63,9 @@ resource "azurerm_mysql_server" "ok" {
 
   identity {
     type = "SystemAssigned"
+  }
+  tags = {
+    yor_trace = "e8abb213-731d-4cb0-bda1-27bf4dbfc7fc"
   }
 }
 
@@ -76,5 +88,8 @@ resource "azurerm_mysql_server" "not_ok" {
 
   identity {
     type = "SystemAssigned"
+  }
+  tags = {
+    yor_trace = "bdd5b43c-f001-4067-a580-c674cbc2ed38"
   }
 }

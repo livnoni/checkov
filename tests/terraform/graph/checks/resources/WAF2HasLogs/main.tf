@@ -54,8 +54,9 @@ resource "aws_wafv2_web_acl" "pass" {
   }
 
   tags = {
-    Tag1 = "Value1"
-    Tag2 = "Value2"
+    Tag1      = "Value1"
+    Tag2      = "Value2"
+    yor_trace = "5d6d8b8e-b2e5-4905-9ada-d1d7e0fd8166"
   }
 
   visibility_config {
@@ -112,8 +113,9 @@ resource "aws_wafv2_web_acl" "fail" {
   }
 
   tags = {
-    Tag1 = "Value1"
-    Tag2 = "Value2"
+    Tag1      = "Value1"
+    Tag2      = "Value2"
+    yor_trace = "b4f9df7a-a0ad-4b3a-a04e-5ba866ea9170"
   }
 
   visibility_config {
