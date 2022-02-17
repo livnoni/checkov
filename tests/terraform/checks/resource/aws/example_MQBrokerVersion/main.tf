@@ -11,6 +11,9 @@ resource "aws_mq_broker" "unknown" {
     username = "ExampleUser"
     password = "MindTheGapps"
   }
+  tags = {
+    yor_trace = "4c8f85c9-fcd6-4520-bf5c-555905d801da"
+  }
 }
 
 
@@ -29,6 +32,9 @@ resource "aws_mq_broker" "fail" {
   }
 
   # publicly_accessible = true
+  tags = {
+    yor_trace = "88c2a594-758a-46fa-a885-1610e8a1db3c"
+  }
 }
 
 resource "aws_mq_broker" "pass" {
@@ -46,6 +52,9 @@ resource "aws_mq_broker" "pass" {
   }
 
   # publicly_accessible = true
+  tags = {
+    yor_trace = "70414cdf-6bef-46d6-a48b-ba70ea9990dd"
+  }
 }
 
 resource "aws_mq_broker" "pass2" {
@@ -63,6 +72,9 @@ resource "aws_mq_broker" "pass2" {
   }
 
   # publicly_accessible = true
+  tags = {
+    yor_trace = "64878000-1033-4597-9b5d-d17cdf6fbb7a"
+  }
 }
 
 #no failing major versions yet
@@ -81,6 +93,9 @@ resource "aws_mq_broker" "fail2" {
   }
 
   # publicly_accessible = true
+  tags = {
+    yor_trace = "3c822b79-656d-422b-ad10-6a1905e7e1ca"
+  }
 }
 
 resource "aws_mq_configuration" "fail" {
@@ -99,6 +114,9 @@ resource "aws_mq_configuration" "fail" {
   </plugins>
 </broker>
 DATA
+  tags = {
+    yor_trace = "34cbebfb-124b-4d68-b895-a8284e0996d3"
+  }
 }
 
 resource "aws_mq_configuration" "pass" {
@@ -117,6 +135,9 @@ resource "aws_mq_configuration" "pass" {
   </plugins>
 </broker>
 DATA
+  tags = {
+    yor_trace = "9de39e4b-6b09-4936-a9ca-0759a9ae004d"
+  }
 }
 
 

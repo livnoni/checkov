@@ -6,9 +6,15 @@ Resources:
       IsLogging: True
       IsMultiRegionTrail: False
       S3BucketName: String
+      Tags:
+        - Key: yor_trace
+          Value: 301a8b5e-3a4e-40d6-91c6-2a5c29bd2ed6
   MyTrail1:
     Type: AWS::CloudTrail::Trail
     Properties: 
       IsLogging: True
       IsMultiRegionTrail: False
       S3BucketName: String
+      Tags:
+        - Key: yor_trace
+          Value: 4fab4245-c1c9-4b96-89b2-9744bc9bc7f3

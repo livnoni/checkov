@@ -8,7 +8,9 @@ resource "azurerm_managed_disk" "fail" {
   encryption_settings {
     enabled = false
   }
-  tags = var.common_tags
+  tags = merge(var.common_tags, {
+    yor_trace = "41787362-f32f-42a0-9d0f-329242c50a97"
+  })
 }
 
 resource "azurerm_managed_disk" "fail2" {
@@ -25,6 +27,7 @@ resource "azurerm_managed_disk" "fail2" {
 
   tags = {
     environment = "staging"
+    yor_trace   = "81fa8b4f-37af-4a79-8173-6563b68aa72a"
   }
 }
 resource "azurerm_managed_disk" "pass3" {
@@ -34,7 +37,9 @@ resource "azurerm_managed_disk" "pass3" {
   storage_account_type = var.storage_account_type
   create_option        = "Empty"
   disk_size_gb         = var.disk_size_gb
-  tags                 = var.common_tags
+  tags = merge(var.common_tags, {
+    yor_trace = "54923700-8a88-44d8-8e94-296657cfd3d5"
+  })
 }
 
 resource "azurerm_managed_disk" "pass2" {
@@ -47,7 +52,9 @@ resource "azurerm_managed_disk" "pass2" {
   encryption_settings {
     enabled = true
   }
-  tags = var.common_tags
+  tags = merge(var.common_tags, {
+    yor_trace = "cbd4098e-4165-45e7-881a-15dd69d9f32d"
+  })
 }
 
 resource "azurerm_managed_disk" "pass" {
@@ -61,6 +68,7 @@ resource "azurerm_managed_disk" "pass" {
 
   tags = {
     environment = "staging"
+    yor_trace   = "383a5d0d-fdc5-435f-b9a0-f323768ed550"
   }
 }
 

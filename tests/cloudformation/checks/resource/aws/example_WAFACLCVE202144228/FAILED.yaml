@@ -11,6 +11,9 @@ Resources:
         SampledRequestsEnabled: false
         MetricName: ExampleWebACLMetric
         CloudWatchMetricsEnabled: false
+      Tags:
+        - Key: yor_trace
+          Value: ba151e5f-32cd-4338-9a4f-53dec3483c71
   WrongRule:
     Type: AWS::WAFv2::WebACL
     Properties:
@@ -35,6 +38,9 @@ Resources:
             CloudWatchMetricsEnabled: false
             MetricName: AWSManagedRulesKnownBadInputsRuleSet
             SampledRequestsEnabled: false
+      Tags:
+        - Key: yor_trace
+          Value: be2f319e-cf40-4e36-a66e-24a6444241dd
   RuleCount:
     Type: AWS::WAFv2::WebACL
     Properties:
@@ -61,6 +67,9 @@ Resources:
             CloudWatchMetricsEnabled: false
             MetricName: AWSManagedRulesKnownBadInputsRuleSet
             SampledRequestsEnabled: false
+      Tags:
+        - Key: yor_trace
+          Value: ad5501df-9b45-4b11-8463-a87679322f82
   RuleGroupCount:
     Type: AWS::WAFv2::WebACL
     Properties:
@@ -85,3 +94,6 @@ Resources:
             CloudWatchMetricsEnabled: false
             MetricName: AWSManagedRulesKnownBadInputsRuleSet
             SampledRequestsEnabled: false
+      Tags:
+        - Key: yor_trace
+          Value: 65284baf-b54d-4bf9-9e96-acecda8069df

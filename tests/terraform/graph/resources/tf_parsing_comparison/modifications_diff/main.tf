@@ -36,4 +36,7 @@ resource "google_compute_instance" "tfer--test3" {
     enable_vtpm                 = "true"
   }
   zone = "us-central1-a"
+  labels = {
+    yor_trace = "ef7c47d4-2101-4ad8-9f6b-e172110eaf19"
+  }
 }

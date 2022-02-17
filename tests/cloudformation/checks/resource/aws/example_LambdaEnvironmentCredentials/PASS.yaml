@@ -16,6 +16,9 @@ Resources:
       Description: Invoke a function during stack creation.
       TracingConfig:
         Mode: Active
+      Tags:
+        - Key: yor_trace
+          Value: 351a6267-e023-43ee-8e8c-94468f03161a
   NoEnv:
     Type: AWS::Lambda::Function
     Properties:
@@ -28,3 +31,6 @@ Resources:
       Description: Invoke a function during stack creation.
       TracingConfig:
         Mode: Active
+      Tags:
+        - Key: yor_trace
+          Value: 2558821f-61cd-4aff-ad19-78a0caf7a517

@@ -14,6 +14,9 @@ resource "aws_ami" "pass" {
     volume_size = 8
     encrypted   = true
   }
+  tags = {
+    yor_trace = "9d8ea8fa-2145-4a37-ae36-e45cd036493e"
+  }
 }
 
 resource "aws_ami" "pass2" {
@@ -25,6 +28,9 @@ resource "aws_ami" "pass2" {
     device_name = "/dev/xvda1"
     volume_size = 8
     encrypted   = true
+  }
+  tags = {
+    yor_trace = "5eaac257-cc43-49bd-ad3d-8c12c08a212d"
   }
 }
 
@@ -44,6 +50,9 @@ resource "aws_ami" "fail" {
     volume_size = 8
     encrypted   = false
   }
+  tags = {
+    yor_trace = "20931f8f-44e8-4eea-9a28-ac76b6a302b2"
+  }
 }
 
 resource "aws_ami" "fail2" {
@@ -56,6 +65,9 @@ resource "aws_ami" "fail2" {
     volume_size = 8
     encrypted   = false
   }
+  tags = {
+    yor_trace = "5e20d759-c7c6-4562-8c96-084ff94f575a"
+  }
 }
 
 resource "aws_ami" "fail3" {
@@ -67,9 +79,12 @@ resource "aws_ami" "fail3" {
     device_name = "/dev/xvda1"
     volume_size = 8
   }
+  tags = {
+    yor_trace = "706c3843-8a0f-4ebf-9504-c293e57995f4"
+  }
 }
 
 
 provider "aws" {
-  region="eu-west-2"
+  region = "eu-west-2"
 }

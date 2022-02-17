@@ -19,3 +19,6 @@ Resources:
                 - :root
           Action: kms:*
           Resource: '*'
+      Tags:
+        - Key: yor_trace
+          Value: 22ca96ec-c75a-4f49-a0d0-7b55b5428071

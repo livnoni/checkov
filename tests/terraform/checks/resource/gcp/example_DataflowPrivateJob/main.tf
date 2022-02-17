@@ -10,6 +10,9 @@ resource "google_dataflow_job" "pass" {
   }
 
   ip_configuration = "WORKER_IP_PRIVATE"
+  labels = {
+    yor_trace = "68c49544-b1de-4951-bdcd-5257cd677fd0"
+  }
 }
 
 
@@ -24,6 +27,9 @@ resource "google_dataflow_job" "fail1" {
     baz = "qux"
   }
 
+  labels = {
+    yor_trace = "6ab924c8-1e4c-49ad-9fb5-c7df90d61017"
+  }
 }
 
 # Fails due to "ip_configuration" existing but set to public
@@ -37,4 +43,7 @@ resource "google_dataflow_job" "fail2" {
   }
 
   ip_configuration = "WORKER_IP_PUBLIC"
+  labels = {
+    yor_trace = "6132ffff-8c4f-4907-8daa-0ddf315504ed"
+  }
 }

@@ -10,6 +10,9 @@ Resources:
           GroupSet: 
             - "myVPCEC2SecurityGroup"
           SubnetId: "PublicSubnet"
+      Tags:
+        - Key: yor_trace
+          Value: ddf6e358-ca14-42f5-8c34-7f03525713d5
   EC2LaunchTemplateResource0:
     Type: AWS::EC2::LaunchTemplate
     Properties:

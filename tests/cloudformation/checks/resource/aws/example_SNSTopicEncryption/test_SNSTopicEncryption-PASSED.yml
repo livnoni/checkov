@@ -9,3 +9,6 @@ Resources:
           Protocol: "sqs"
       TopicName: "SampleTopic"
       KmsMasterKeyId: "kms_id"
+      Tags:
+        - Key: yor_trace
+          Value: f859231a-8c3d-4470-9512-b769ce04ef37

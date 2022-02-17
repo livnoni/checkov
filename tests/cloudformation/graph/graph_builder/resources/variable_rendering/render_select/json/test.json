@@ -11,6 +11,12 @@
         "VPC": {
             "Type": "AWS::EC2::VPC",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "yor_trace",
+                    "Value": "529904c0-0bd6-46de-825e-e7692dcacdc9"
+                  }
+                ],
                 "CidrBlock": "172.16.0.0/16",
                 "EnableDnsSupport": true,
                 "EnableDnsHostnames": true
@@ -19,6 +25,12 @@
         "Subnet0": {
             "Type": "AWS::EC2::Subnet",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "yor_trace",
+                    "Value": "677a45ef-e8cc-463b-a5fa-6b02dcfb7823"
+                  }
+                ],
                 "VpcId": {
                     "Ref": "VPC"
                 },

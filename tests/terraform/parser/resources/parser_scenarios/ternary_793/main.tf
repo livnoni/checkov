@@ -15,4 +15,7 @@ resource "aws_instance" "foo" {
   metadata_options {
     http_tokens = (var.metadata_http_tokens_required) ? "required" : "optional"
   }
+  tags = {
+    yor_trace = "12162b11-6a96-4355-bffc-9eae2388bcfe"
+  }
 }

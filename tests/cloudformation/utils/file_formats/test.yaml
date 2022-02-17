@@ -14,6 +14,9 @@ Resources:
     Type: AWS::SQS::Queue
     Properties:
       KmsMasterKeyId: !Ref KmsMasterKeyId
+      Tags:
+        - Key: yor_trace
+          Value: fb615195-450e-492f-8c2a-071164f1061c
   MyDB:
     # Test case for check skip via 'Metadata'
     Metadata:
@@ -35,6 +38,9 @@ Resources:
       MasterUsername: 'master'
       MasterUserPassword: 'password'
       PubliclyAccessible: True
+      Tags:
+        - Key: yor_trace
+          Value: 839237ca-f81d-47ec-b9f5-0114f886cbfe
 
 Outputs:
   DBAppPublicDNS:

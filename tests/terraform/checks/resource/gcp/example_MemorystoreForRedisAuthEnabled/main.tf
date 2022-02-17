@@ -10,7 +10,8 @@ resource "google_redis_instance" "pass" {
   redis_version           = "REDIS_6_X"
 
   labels = {
-    foo = "bar"
+    foo       = "bar"
+    yor_trace = "32a316f5-5caa-4feb-a102-076efbaf9f45"
   }
 
   auth_enabled = true
@@ -40,6 +41,9 @@ resource "google_redis_instance" "fail1" {
       }
     }
   }
+  labels = {
+    yor_trace = "e7670184-0152-49cc-abe4-e688cc2ef3ab"
+  }
 }
 
 # Fails b/c we turn off AUTH
@@ -48,4 +52,7 @@ resource "google_redis_instance" "fail2" {
   memory_size_gb = 1
 
   auth_enabled = false
+  labels = {
+    yor_trace = "b5433e09-fb93-4e09-901f-ed61a41b4250"
+  }
 }

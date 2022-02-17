@@ -22,3 +22,6 @@ Resources:
             Condition:
               ForAllValues:StringEquals:
                 aws:PrincipalOrgID: "o-12345678"
+      Tags:
+        - Key: yor_trace
+          Value: 364a832a-fdf5-491f-8bc7-6cc24f91a14b

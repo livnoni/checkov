@@ -29,3 +29,5 @@ layers:
 functions:
   myFunction:
     handler: myfunction.invoke
+    tags:
+      yor_trace: b2d790f6-f9a3-4b0a-8656-9f9d1b2003cf

@@ -21,6 +21,9 @@ Resources:
             - Effect: Allow
               Action: '*'
               Resource: '*'    
+      Tags:
+        - Key: yor_trace
+          Value: 89603f3a-a28c-4b9c-878c-9268661e3211
   PolicyOneFailPolicyTwoFailPermissionsWildcard:
     Type: 'AWS::IAM::User'
     Properties:
@@ -41,3 +44,6 @@ Resources:
               Action: 
               - 's3:PutBucketAcl'
               Resource: '*'
+      Tags:
+        - Key: yor_trace
+          Value: 4f1fa005-4c17-4c80-a6bc-a03ff1963fe6

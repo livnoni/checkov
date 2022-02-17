@@ -5,9 +5,15 @@ Resources:
     Properties:
       MasterUsername: name
       MasterUserPassword: password
+      Tags:
+        - Key: yor_trace
+          Value: febe2171-c90c-4829-855f-94e711906abf
   DocDBDisabled:
     Type: AWS::DocDB::DBCluster
     Properties:
       MasterUsername: name
       MasterUserPassword: password
       StorageEncrypted: false
+      Tags:
+        - Key: yor_trace
+          Value: 90e2fcdf-838b-41ec-8a36-94a7d02e1912

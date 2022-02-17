@@ -8,11 +8,17 @@ Resources:
       Targets:
         S3Targets:
           - Path: s3-bucket
+      Tags:
+        - Key: yor_trace
+          Value: 4590eb42-450b-4a34-85d9-29a1f291d9bf
   DevEndpointDefault:
     Type: AWS::Glue::DevEndpoint
     Properties:
       EndpointName: example
       RoleArn: arn:aws:iam::123456789012:role/role
+      Tags:
+        - Key: yor_trace
+          Value: 1f734ce6-eb77-4759-ab30-35f72e626b03
   JobDefault:
     Type: AWS::Glue::Job
     Properties:
@@ -21,3 +27,6 @@ Resources:
         ScriptLocation: s3://aws-glue-scripts//prod-job
       Name: example
       Role: arn:aws:iam::123456789012:role/role
+      Tags:
+        - Key: yor_trace
+          Value: e0005670-cdca-4d32-93e0-50bb7759737f

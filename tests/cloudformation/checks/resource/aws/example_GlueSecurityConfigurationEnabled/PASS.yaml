@@ -9,12 +9,18 @@ Resources:
         S3Targets:
           - Path: s3-bucket
       CrawlerSecurityConfiguration: security-conf
+      Tags:
+        - Key: yor_trace
+          Value: 544eb782-e31c-4345-8ca2-9f6448c30b9f
   DevEndpointEnabled:
     Type: AWS::Glue::DevEndpoint
     Properties:
       EndpointName: example
       RoleArn: arn:aws:iam::123456789012:role/role
       SecurityConfiguration: security-conf
+      Tags:
+        - Key: yor_trace
+          Value: 0666d9b7-779c-47b4-8c2f-fcdb1e70f75b
   JobEnabled:
     Type: AWS::Glue::Job
     Properties:
@@ -24,3 +30,6 @@ Resources:
       Name: example
       Role: arn:aws:iam::123456789012:role/role
       SecurityConfiguration: security-conf
+      Tags:
+        - Key: yor_trace
+          Value: f423cbdd-a415-4b1e-b0f3-c344cf3dd363

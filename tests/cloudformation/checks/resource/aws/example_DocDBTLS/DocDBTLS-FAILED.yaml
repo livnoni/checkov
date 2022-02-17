@@ -9,3 +9,6 @@ Resources:
       Parameters: 
         tls: "disabled"
         ttl_monitor: "enabled"
+      Tags:
+        - Key: yor_trace
+          Value: 9c018c84-0dd8-4be5-9144-c88245596088

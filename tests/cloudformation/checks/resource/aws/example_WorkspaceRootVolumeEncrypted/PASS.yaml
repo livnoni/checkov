@@ -7,3 +7,6 @@ Resources:
       BundleId: wsb-abc123456
       DirectoryId: d-abc123456
       RootVolumeEncryptionEnabled: true
+      Tags:
+        - Key: yor_trace
+          Value: 1f7f25b3-876e-44ac-bd07-0fddf14010d3

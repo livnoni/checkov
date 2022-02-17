@@ -59,4 +59,7 @@ resource "aws_s3_bucket" "template_bucket" {
   bucket        = local.bucket_name
   acl           = var.acl
   force_destroy = true
+  tags = {
+    yor_trace = "60d26fb8-0c4f-465e-b257-87d37b05aa8d"
+  }
 }

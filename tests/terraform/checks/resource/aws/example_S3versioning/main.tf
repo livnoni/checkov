@@ -7,6 +7,9 @@ resource "aws_s3_bucket" "fail4" {
   tags {
     Name = "my-bucket"
   }
+  tags = {
+    yor_trace = "36ec2421-77cc-42a3-aea0-259c7d6742e3"
+  }
 }
 
 
@@ -15,8 +18,10 @@ resource "aws_s3_bucket" "fail3" {
   bucket        = "my_bucket"
   acl           = "public-read"
   force_destroy = true
-  tags          = { Name = "my-bucket" }
-  enabled       = True
+  tags = { Name = "my-bucket"
+    yor_trace = "9e6ee727-a3fd-4adb-b72e-11cd7312fc27"
+  }
+  enabled = True
 }
 
 resource "aws_s3_bucket" "fail2" {
@@ -28,6 +33,7 @@ resource "aws_s3_bucket" "fail2" {
     Name = "my-bucket"
     wrong_field = {
     enabled = true }
+    yor_trace = "a8b0c48c-efd2-4bcd-b048-d246e6f93301"
   }
 }
 
@@ -36,8 +42,10 @@ resource "aws_s3_bucket" "fail" {
   bucket        = "my_bucket"
   acl           = "public-read"
   force_destroy = true
-  tags          = { Name = "my-bucket" }
-  wrong_field   = { versioning = { enabled = true } }
+  tags = { Name = "my-bucket"
+    yor_trace = "721fa90f-4829-432c-9ccc-6c691adca87c"
+  }
+  wrong_field = { versioning = { enabled = true } }
 }
 
 
@@ -47,7 +55,9 @@ resource "aws_s3_bucket" "pass" {
   acl           = "public-read"
   force_destroy = true
 
-  tags = { Name = "my-bucket" }
+  tags = { Name = "my-bucket"
+    yor_trace = "8c04cbc9-b10f-49b7-95b0-a064a92ce22d"
+  }
 
   logging {
     target_bucket = "logging-bucket"
@@ -93,6 +103,9 @@ resource "aws_s3_bucket" "failcomplex" {
   ]
 }
 POLICY
+  tags = {
+    yor_trace = "260ac91c-92fc-4edc-8ee7-1ca73411964b"
+  }
 }
 
 
@@ -101,6 +114,9 @@ resource "aws_s3_bucket" "this" {
   acl    = "private"
   versioning {
     enabled = var.enabled
+  }
+  tags = {
+    yor_trace = "9fbe2ca3-616c-401b-a86e-7933c2a47d10"
   }
 }
 

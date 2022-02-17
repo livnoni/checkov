@@ -27,6 +27,9 @@ resource "aws_ssm_document" "enabled" {
     }
   }
 DOC
+  tags = {
+    yor_trace = "20425eba-daa3-4e65-8e6d-8929ac182794"
+  }
 }
 
 resource "aws_ssm_document" "enabled_yaml" {
@@ -54,6 +57,9 @@ resource "aws_ssm_document" "enabled_yaml" {
       windows: ''
       linux: ''
 DOC
+  tags = {
+    yor_trace = "f8326a3a-329a-43ff-8ad0-08b11f15ead2"
+  }
 }
 
 # failure
@@ -85,6 +91,9 @@ resource "aws_ssm_document" "disabled" {
     }
   }
 DOC
+  tags = {
+    yor_trace = "ba27ccf1-3257-4939-b9b3-4d899a839c9d"
+  }
 }
 
 resource "aws_ssm_document" "disabled_yaml" {
@@ -112,4 +121,7 @@ resource "aws_ssm_document" "disabled_yaml" {
       windows: ''
       linux: ''
 DOC
+  tags = {
+    yor_trace = "c0cc8b83-b51b-47ff-b0b0-2be7b114c94f"
+  }
 }

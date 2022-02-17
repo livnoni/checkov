@@ -9,7 +9,8 @@ resource "google_bigtable_instance" "fail" {
   }
 
   labels = {
-    my-label = "prod-label"
+    my-label  = "prod-label"
+    yor_trace = "1bb5326b-cd6b-4cbc-89a4-836595723fa1"
   }
 }
 
@@ -24,6 +25,7 @@ resource "google_bigtable_instance" "pass" {
   }
 
   labels = {
-    my-label = "prod-label"
+    my-label  = "prod-label"
+    yor_trace = "a0b04fed-cda6-4edd-87ea-e2daadecf8dd"
   }
 }

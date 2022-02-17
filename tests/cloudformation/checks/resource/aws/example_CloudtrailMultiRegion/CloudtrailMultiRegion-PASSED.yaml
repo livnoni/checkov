@@ -6,3 +6,6 @@ Resources:
       IsLogging: True
       IsMultiRegionTrail: True
       S3BucketName: String
+      Tags:
+        - Key: yor_trace
+          Value: 5ac6f50b-9aee-438a-b09d-b8c7bf814d30

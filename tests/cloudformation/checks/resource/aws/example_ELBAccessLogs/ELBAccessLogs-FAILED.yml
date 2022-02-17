@@ -11,6 +11,9 @@ Resources:
       AccessLoggingPolicy:
         Enabled: false
         S3BucketName: MyBucket
+      Tags:
+        - Key: yor_trace
+          Value: 472f182a-c2d5-43c5-bb8e-d32b6617e014
   Resource1:
     Type: 'AWS::ElasticLoadBalancing::LoadBalancer'
     Properties:
@@ -19,3 +22,6 @@ Resources:
         InstanceProtocol: HTTP
         LoadBalancerPort: '80'
         Protocol: HTTP
+      Tags:
+        - Key: yor_trace
+          Value: 7e52b61a-255a-4a36-8fcb-9c8fc37c0249

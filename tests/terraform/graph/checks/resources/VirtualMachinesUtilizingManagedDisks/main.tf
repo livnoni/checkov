@@ -27,6 +27,7 @@ resource "azurerm_virtual_machine" "virtual_machine_good" {
   }
   tags = {
     environment = "staging"
+    yor_trace   = "d545bdc9-3277-47c2-ae79-ae8c401f5f78"
   }
 }
 
@@ -44,10 +45,10 @@ resource "azurerm_virtual_machine" "virtual_machine_bad" {
     version   = "latest"
   }
   storage_os_disk {
-    name              = "myosdisk1"
-    caching           = "ReadWrite"
-    create_option     = "FromImage"
-    vhd_uri           = "uri://foo"
+    name          = "myosdisk1"
+    caching       = "ReadWrite"
+    create_option = "FromImage"
+    vhd_uri       = "uri://foo"
   }
   os_profile {
     computer_name  = "hostname"
@@ -59,5 +60,6 @@ resource "azurerm_virtual_machine" "virtual_machine_bad" {
   }
   tags = {
     environment = "staging"
+    yor_trace   = "73851daa-111d-4f9d-b946-33f7ccdefc89"
   }
 }

@@ -6,6 +6,7 @@ resource "aws_lb" "lb_bad_1" {
   enable_deletion_protection = true
   tags = {
     Environment = "production"
+    yor_trace   = "3f2966d0-21aa-499f-993a-1f15d341130a"
   }
 }
 

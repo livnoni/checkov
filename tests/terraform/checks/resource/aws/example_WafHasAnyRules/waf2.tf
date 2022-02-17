@@ -48,6 +48,9 @@ resource "aws_wafv2_web_acl" "pass" {
     metric_name                = "friendly-metric-name"
     sampled_requests_enabled   = false
   }
+  tags = {
+    yor_trace = "2161637c-cd1b-4f57-83d8-a9ad0a964d11"
+  }
 }
 
 resource "aws_wafv2_web_acl" "fail" {
@@ -63,6 +66,9 @@ resource "aws_wafv2_web_acl" "fail" {
     cloudwatch_metrics_enabled = false
     metric_name                = "friendly-metric-name"
     sampled_requests_enabled   = false
+  }
+  tags = {
+    yor_trace = "dcdfa2a5-0cc9-4d0e-9089-487ac501c486"
   }
 }
 
@@ -81,5 +87,8 @@ resource "aws_wafv2_web_acl" "fail2" {
     cloudwatch_metrics_enabled = false
     metric_name                = "friendly-metric-name"
     sampled_requests_enabled   = false
+  }
+  tags = {
+    yor_trace = "a5816187-c148-456e-9b2a-47eeebee554f"
   }
 }

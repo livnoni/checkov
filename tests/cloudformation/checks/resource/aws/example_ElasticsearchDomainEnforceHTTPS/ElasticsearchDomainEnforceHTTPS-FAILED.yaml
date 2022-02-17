@@ -5,12 +5,21 @@ Resources:
     Properties:
       DomainEndpointOptions:
         EnforceHTTPS: False
+      Tags:
+        - Key: yor_trace
+          Value: 79118d9e-0d3c-40c3-a59f-0fbcdf942cee
   Resource1:
     Type: 'AWS::Elasticsearch::Domain'
     Properties:
       DomainEndpointOptions:
         TLSSecurityPolicy: "Policy-Min-TLS-1-2-2019-07"
+      Tags:
+        - Key: yor_trace
+          Value: 1ededd39-a7f6-446b-a671-edd00b24a460
   Resource2:
     Type: 'AWS::Elasticsearch::Domain'
     Properties:
       ElasticsearchVersion: "2.3"
+      Tags:
+        - Key: yor_trace
+          Value: 341e8b71-e16a-4fed-ba36-23ee9c9bb1b1

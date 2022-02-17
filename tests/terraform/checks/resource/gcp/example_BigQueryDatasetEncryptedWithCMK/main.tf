@@ -6,7 +6,8 @@ resource "google_bigquery_dataset" "fail" {
   default_table_expiration_ms = 3600000
 
   labels = {
-    env = "default"
+    env       = "default"
+    yor_trace = "a2aa2767-d59e-45f2-9daf-d0d7199633af"
   }
 
   access {
@@ -29,5 +30,8 @@ resource "google_bigquery_dataset" "pass" {
 
   default_encryption_configuration {
     kms_key_name = google_kms_crypto_key.example.name
+  }
+  labels = {
+    yor_trace = "3931c2c7-2209-4e70-a180-81cac4336222"
   }
 }

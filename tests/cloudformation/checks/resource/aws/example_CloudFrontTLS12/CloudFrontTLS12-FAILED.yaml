@@ -31,7 +31,9 @@ Resources:
           AcmCertificateArn: "cert-test"
           MinimumProtocolVersion: SSLv3
           SslSupportMethod: sni-only
-
+      Tags:
+        - Key: yor_trace
+          Value: c10b8fca-91c1-4847-b8d8-4fd35f1473e2
   cloudfrontdistributionFAILED2:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -51,7 +53,9 @@ Resources:
               OriginProtocolPolicy: "http-only"
             DomainName: "testing"
             Id: "id"
-
+      Tags:
+        - Key: yor_trace
+          Value: 9d7220ff-6eda-4cf3-8707-a11e72c39789
   cloudfrontdistributionFAILED3:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -80,3 +84,6 @@ Resources:
             Id: "id"
         ViewerCertificate:
           CloudFrontDefaultCertificate : true
+      Tags:
+        - Key: yor_trace
+          Value: 6aa6e333-74f2-4638-adc0-a824acf1007c

@@ -21,6 +21,9 @@ resource "aws_mq_broker" "pass" {
     use_aws_owned_key = false
     kms_key_id        = aws_kms_key.example.arn
   }
+  tags = {
+    yor_trace = "89cbf722-0368-4de6-97bd-6695f1af7e5b"
+  }
 }
 
 
@@ -45,6 +48,9 @@ resource "aws_mq_broker" "fail" {
   encryption_options {
     use_aws_owned_key = true
   }
+  tags = {
+    yor_trace = "56c3df2a-e38d-4237-bb28-1f71e2e3b913"
+  }
 }
 
 resource "aws_mq_broker" "fail2" {
@@ -63,5 +69,8 @@ resource "aws_mq_broker" "fail2" {
   user {
     username = "ExampleUser"
     password = "MindTheGapps"
+  }
+  tags = {
+    yor_trace = "827eb947-0aa8-4cf3-ad77-b407ca902bf2"
   }
 }

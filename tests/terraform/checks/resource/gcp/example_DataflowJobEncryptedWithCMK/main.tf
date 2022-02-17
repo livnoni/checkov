@@ -7,6 +7,9 @@ resource "google_dataflow_job" "fail" {
     baz = "qux"
   }
   #   kms_key_name =
+  labels = {
+    yor_trace = "b3d18b93-c58b-4689-9d00-606cd740e6ba"
+  }
 }
 
 resource "google_dataflow_job" "pass" {
@@ -18,4 +21,7 @@ resource "google_dataflow_job" "pass" {
     baz = "qux"
   }
   kms_key_name = "SecretSquirrel"
+  labels = {
+    yor_trace = "f992dbb6-9c3c-4fdc-b827-6047e21b9972"
+  }
 }

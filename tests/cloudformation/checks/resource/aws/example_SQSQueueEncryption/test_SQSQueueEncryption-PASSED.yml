@@ -7,3 +7,6 @@ Resources:
         deadLetterTargetArn: "example_arn"
         maxReceiveCount: 5
       KmsMasterKeyId: "kms_id"
+      Tags:
+        - Key: yor_trace
+          Value: fa1413cc-32db-4071-964f-070e5a571b88

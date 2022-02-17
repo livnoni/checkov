@@ -8,3 +8,6 @@ Resources:
       RestApiId: test
       DeploymentId: test
       CacheClusterEnabled: true
+      Tags:
+        - Key: yor_trace
+          Value: 49129c49-a3ef-4c76-ba3a-8fdce04e8002

@@ -15,6 +15,9 @@ resource "aws_mq_broker" "enabled" {
     general = true
     audit   = true
   }
+  tags = {
+    yor_trace = "373c71ef-a61e-46a2-a797-75feb8c07626"
+  }
 }
 
 # fail
@@ -28,6 +31,9 @@ resource "aws_mq_broker" "default" {
   user {
     password = "admin123"
     username = "admin"
+  }
+  tags = {
+    yor_trace = "4e526a16-7534-4c22-a432-ba35e9a17755"
   }
 }
 
@@ -46,6 +52,9 @@ resource "aws_mq_broker" "disabled" {
     general = false
     audit   = false
   }
+  tags = {
+    yor_trace = "e5b10a60-2ad6-4e17-b5a8-b405f951aea9"
+  }
 }
 
 
@@ -57,5 +66,8 @@ resource "aws_mq_broker" "unknown" {
 
   logs {
     general = false
+  }
+  tags = {
+    yor_trace = "750dadc8-34dd-4ef3-86f8-0c6aadd26235"
   }
 }

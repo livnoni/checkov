@@ -15,6 +15,9 @@ resource "aws_kms_key" "pass_0" {
   ]
 }
 POLICY  
+  tags = {
+    yor_trace = "30de83de-2ecb-42bc-a06c-c4cefb3d7c42"
+  }
 }
 
 resource "aws_kms_key" "pass_1" {
@@ -34,6 +37,9 @@ resource "aws_kms_key" "pass_1" {
   ]
 }
 POLICY  
+  tags = {
+    yor_trace = "0a7a992c-c831-44f0-a2b7-966803f4cbcb"
+  }
 }
 
 resource "aws_kms_key" "pass_2" {
@@ -51,6 +57,9 @@ resource "aws_kms_key" "pass_2" {
   ]
 }
 POLICY  
+  tags = {
+    yor_trace = "35e5cd6f-ff60-4a4a-b35b-9c15b4de45c0"
+  }
 }
 
 resource "aws_kms_key" "pass_3" {
@@ -68,4 +77,7 @@ resource "aws_kms_key" "pass_3" {
   ]
 }
 POLICY  
+  tags = {
+    yor_trace = "9fc09bda-a765-44eb-991c-d1c918e6b096"
+  }
 }

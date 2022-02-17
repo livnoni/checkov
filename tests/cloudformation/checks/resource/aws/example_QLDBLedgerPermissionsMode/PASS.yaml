@@ -5,3 +5,6 @@ Resources:
     Properties:
       Name: "ledger"
       PermissionsMode: "STANDARD"
+      Tags:
+        - Key: yor_trace
+          Value: 34fda410-7a8d-464a-9acf-f785556fd552
